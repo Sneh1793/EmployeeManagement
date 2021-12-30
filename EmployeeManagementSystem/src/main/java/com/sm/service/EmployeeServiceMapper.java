@@ -4,6 +4,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
 import com.sm.api.EmployeeGetModel;
+import com.sm.remote.AddressDetailDTO;
 import com.sm.repository.EmployeeEntity;
 
 @Mapper
@@ -13,5 +14,7 @@ public interface EmployeeServiceMapper  {
 	
 	@Mapping(source= "employeeId", target= "empid")
 	EmployeeGetBO fromEmployeeEntityToEmployeeGetBO(EmployeeEntity employeeEntity);
+	
+	AddressBO fromAddressDetailDTOToAddressBO(AddressDetailDTO addressDetailDTO);
 
 }
