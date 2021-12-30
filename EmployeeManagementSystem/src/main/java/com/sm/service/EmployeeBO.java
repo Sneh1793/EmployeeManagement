@@ -10,5 +10,6 @@ public class EmployeeBO {
 	private String firstName;
 	private String lastName;
 	private char gender;
+	private Integer pinCode;
 	private LocalDate dateOfBirth;
 }

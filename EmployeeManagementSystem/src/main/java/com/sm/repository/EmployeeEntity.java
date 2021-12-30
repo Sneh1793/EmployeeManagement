@@ -43,8 +43,11 @@ public class EmployeeEntity {
 	private String lastName;
 	@Column(name="employee_gender")
 	private char gender;
+	
+	@Column(name="pin_code")
+	private Integer pinCode;
+	
 	@Column(name="date_of_birth")
-
 	private LocalDate dateOfBirth;
 	
 	

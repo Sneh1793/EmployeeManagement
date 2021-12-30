@@ -3,6 +3,7 @@ package com.sm.api;
 import javax.validation.Valid;
 
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sm.repository.EmployeeDao;
 import com.sm.service.EmployeeBO;
 import com.sm.service.EmployeeGetBO;
 import com.sm.service.EmployeeService;
@@ -22,14 +24,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 @RestController
 @RequestMapping(path = "/api")
+@Component
 public class EmployeeController {
 
 	private EmployeeService employeeService;
 	private EmployeeApiMapper employeeApiMapper;
+	
 
-	public EmployeeController(EmployeeApiMapper employeeApiMapper, EmployeeService employeeService) {
+	public EmployeeController(EmployeeApiMapper employeeApiMapper, EmployeeService employeeService ) {
 		this.employeeApiMapper = employeeApiMapper;
 		this.employeeService = employeeService;
+		
 	}
 
 	

@@ -14,4 +14,6 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         generate_ddl: false
 
-  
+address:
+  api:
+    baseurl: http://postalpincode.in 
